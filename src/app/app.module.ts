@@ -8,6 +8,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { FormsModule } from '@angular/forms';
+import { LenPipe } from './len.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     DatabindingComponent,
     EventbindingComponent,
-    TwowaybindingComponent
+    TwowaybindingComponent,
+    LenPipe
   ],
   imports: [
     BrowserModule,
