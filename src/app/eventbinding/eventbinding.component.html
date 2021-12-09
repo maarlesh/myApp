@@ -4,6 +4,6 @@
 <input type="button" value="Click me!!!" (click)="hi()">
 <input type ="button" value="+" (click)="increaseSize()">
 <input type ="button" value="-" (click)="decreaseSize()">
-<img src="../assets/img/b447863ea028516d2526d98a6277b861.jpg" height="400" width="300"/>
+<img [src]="imgSrc" (mouseover)="changeUrl()" (mouseout)="changeUrl1()" height="400" width="300"/>
 <hr>
 

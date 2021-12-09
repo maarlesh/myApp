@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EventbindingComponent implements OnInit {
   fontSize = 14;
   fontSizeText = "";
+  imgSrc:string = "../assets/img/1.jpg"
   constructor() { }
 
   ngOnInit(): void {
@@ -22,5 +23,11 @@ export class EventbindingComponent implements OnInit {
   decreaseSize(){
     this.fontSize = this.fontSize -2 ;
     this.fontSizeText = this.fontSize+"px";
+  }
+  changeUrl(){
+    this.imgSrc ="../assets/img/2.jpg"
+  }
+  changeUrl1(){
+    this.imgSrc ="../assets/img/1.jpg"
   }
 }
