@@ -10,6 +10,7 @@ import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component'
 import { FormsModule } from '@angular/forms';
 import { LenPipe } from './len.pipe';
 import { DirdemoComponent } from './dirdemo/dirdemo.component';
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DirdemoComponent } from './dirdemo/dirdemo.component';
     EventbindingComponent,
     TwowaybindingComponent,
     LenPipe,
-    DirdemoComponent
+    DirdemoComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<h1>Chapter-6 Crud !!!</h1>
+<table border="1">
+    <tr>
+        <th>S NO</th>
+        <th>Movie Name</th>
+        <th>Dir Name</th>
+        <th>Protoganist</th>
+    </tr>
+    <tr *ngFor = "let m of movieList;let i=index">
+        <th>{{i}}</th>
+        <th>{{m.name}}</th>
+        <th>{{m.dir}}</th>
+        <th>{{m.cast}}</th>
+        <th>
+            <input type="button" value="View" (click)="view(i)">
+        </th>
+        <th>
+            <input type="button" value="delete" (click) = "delete(i)">
+        </th>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<input type="button" value="insert"(click)="showInsertOption()"/>
+<div *ngIf = "showInsert">
+    Enter name of the movie <input type="text" [(ngModel)] = "newMovie.name"/><br><br>
+    Enter name of the Director <input type="text" [(ngModel)] = "newMovie.dir"/><br><br>
+    Enter name of the cast <input type="text" [(ngModel)] = "newMovie.cast"/><br><br>
+    <input type="button" value="Submit" (click)="insert()">
+    <input type="button" value="Cancel" (click)="dontShowInsert()">
+</div>
+<div *ngIf = "showFlag">
+    <h3>View movie details</h3>
+    {{clickedMovie.name}} -- {{clickedMovie.dir}} -- {{clickedMovie.cast}}
+</div>

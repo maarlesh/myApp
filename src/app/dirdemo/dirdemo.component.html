@@ -11,3 +11,9 @@
     <li *ngFor = "let m of movieList2;let i=index">{{i}}.{{m.name}}-{{m.dir}}</li>
 </ul>
 <hr>
+<p [ngStyle]="{'color':varColor,'font-size.px':25}">
+    This is the demo for the ngStyle
+    <input type="button" value="red" (click)="changeColorRed()"/>
+    <input type="button" value="green" (click)="changeColorGreen()"/>
+</p>
+<hr>
