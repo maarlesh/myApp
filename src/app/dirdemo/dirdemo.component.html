@@ -3,3 +3,11 @@
 <h1 *ngIf="show">thambi! correct uh irunthukoo</h1>
 <input type="button" (click) = "showVal()" value="Show/Hide"/>
 <hr>
+<h2>ngFor Demo</h2>
+<ul>
+    <li *ngFor = "let m of movieList1">{{m}}</li>
+    <li *ngFor = "let m of movieList2">{{m}}</li>
+    <li *ngFor = "let m of movieList2">{{m.name}}-{{m.dir}}</li>
+    <li *ngFor = "let m of movieList2;let i=index">{{i}}.{{m.name}}-{{m.dir}}</li>
+</ul>
+<hr>
