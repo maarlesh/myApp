@@ -32,6 +32,7 @@ export class CrudComponent implements OnInit {
   newMovie ={name:"",dir:"",cast:""}
   showFlag:boolean = false;
   showInsert:boolean = false;
+  showUpdate:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -42,6 +43,7 @@ export class CrudComponent implements OnInit {
   view(index:number){
     this.showFlag = true;
     this.clickedMovie = this.movieList[index];
+    this.showUpdate = false;
   }
   insert(){
     this.movieList.push(this.newMovie);
@@ -55,6 +57,11 @@ export class CrudComponent implements OnInit {
   }
   dontShowInsert(){
     this.showInsert = false;
+  }
+  update(index:number){
+    this.clickedMovie = this.movieList[index];
+    this.showFlag = false;
+    this.showUpdate = true;
   }
 
 }

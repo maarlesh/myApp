@@ -4,7 +4,7 @@
         <th>S NO</th>
         <th>Movie Name</th>
         <th>Dir Name</th>
-        <th>Protoganist</th>
+        <th>Cast</th>
     </tr>
     <tr *ngFor = "let m of movieList;let i=index">
         <th>{{i}}</th>
@@ -16,6 +16,9 @@
         </th>
         <th>
             <input type="button" value="delete" (click) = "delete(i)">
+        </th>
+        <th>
+            <input type="button" value="update" (click) = "update(i)">
         </th>
     </tr>
 </table>
@@ -29,6 +32,9 @@
     Enter name of the cast <input type="text" [(ngModel)] = "newMovie.cast"/><br><br>
     <input type="button" value="Submit" (click)="insert()">
     <input type="button" value="Cancel" (click)="dontShowInsert()">
+</div>
+<div *ngIf = "showUpdate">
+    Re type the name of the Director<input type="text" [(ngModel)] = "clickedMovie.dir"/><br><br>
 </div>
 <div *ngIf = "showFlag">
     <h3>View movie details</h3>
